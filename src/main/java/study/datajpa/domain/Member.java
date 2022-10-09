@@ -9,6 +9,11 @@ import javax.persistence.*;
 @Getter @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString(of = {"id", "username", "age"})
+//애플리케이션 로딩 시점에서 컴파일 에러 발견 가능
+@NamedQuery(
+        name = "Member.findByUsername",
+        query = "select m from Member m where m.username = :username"
+)
 public class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
