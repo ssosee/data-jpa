@@ -52,10 +52,10 @@ public class MemberController {
 //                .map(MemberDto::new);
     }
 
-    @PostConstruct
-    public void init() {
-        for(int i = 0; i < 100; i++) {
-            memberRepository.save(new Member("user"+i, 10));
-        }
-    }
+//    @PostConstruct
+//    public void init() {
+//        for(int i = 0; i < 100; i++) {
+//            memberRepository.save(new Member("user"+i, 10));
+//        }
+//    }
 }
